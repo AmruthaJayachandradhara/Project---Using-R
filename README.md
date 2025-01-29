@@ -1,2 +1,15 @@
 # Project---Using-R
 Google Play store App -Analysis Review On Google Playstore Using XGBoost
+
+Introduction: In the competitive world of mobile applications, understanding the factors behind an app’s success is vital for developers and businesses. With Android powering over 2.5 billion devices globally (Brandom, 2019), the Google Play Store serves as a key platform for app distribution and user engagement. This study leverages Google Play Store data to predict app success based on features like category, ratings, reviews, content suitability, and technical compatibility.
+Using machine learning models such as Logistic Regression, kNN, Random Forest, SVM, and XGBoost, we compare model performance to identify the best classifier for app success. This research provides actionable insights for developers, aligning app design with user expectations.
+
+Exploratory Data Analysis (EDA): Data Cleaning The Google Play Store dataset, as analyzed, contains missing values and inconsistent formats across various columns. To clean and prepare this dataset for analysis, several steps were taken to address these data quality issues. Here is an overview of how missing records were managed and further improvements that could be considered:
+
+Data Pre-processing 1.Category Encoding:The Category column was transformed into dummy variables using model.matrix(), and the original column was removed. Column names were standardized by replacing spaces with underscores. 2.Installs Classification:The Installs column was converted into a binary variable (Low Installs as 0 and High Installs as 1) based on the median value. A histogram was created to visualize the distribution of categories. 3.Last Updated Transformation:The Last.Updated column was converted into numeric values representing the days since the most recent update, ensuring a quantitative measure of recency.
+
+Modelling: Why XGBoost: Utilizing a gradient boosting algorithm to predict “Low Installs” vs. “High Installs” for Play Store apps. Gradient boosting was chosen for its ability to handle complex relationships, mixed data types, and imbalanced datasets, while providing feature importance insights and high predictive power.
+
+Interpretability: Feature importance Reviews Dominance: The high importance of Reviews suggests that the number of reviews is strongly correlated with the success metric. It might reflect the popularity or credibility of an app. Secondary Factors: Rating, Last.Updated, Price, and Size might provide additional predictive power but are not as influential as Reviews.
+
+Conclusion: Developers and stakeholders can leverage these insights to make data-driven decisions and prioritize features and strategies that have the greatest impact on driving app installs. Enhancing user reviews and ratings is crucial for building trust and credibility among users, while optimizing app size ensures smooth downloads and seamless usage, improving user experience. Additionally, adopting a low-pricing strategy can help attract a broader user base, making the app more accessible and appealing in competitive markets.
